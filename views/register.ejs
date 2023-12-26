@@ -1,0 +1,26 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-screen bg-zinc-300 flex items-center justify-center  bg-cover bg-center">
+  <div class="w-[32%]  bg-zinc-100 px-20 py-2 rounded-[30px] flex flex-col items-center text-center ">
+      <img class="w-16" src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo"  />
+      <h1 class="text-2xl mb-4 leading-none tracking-tight">Create New Account</h1>
+      <form action="/register" method="post">
+        <input class="border-2 block mt-2 w-full px-3 py-2 rounded-md  "  type="text" name="username" placeholder="username"  />
+        <input class="border-2 block mt-2 w-full px-3 py-2 rounded-md  "  type="text" name="fullname" placeholder="FullName"  />
+        <input class="border-2 block mt-2 w-full px-3 py-2 rounded-md  "  type="email" name="email" placeholder="email"  />
+        <input class="border-2 block mt-2 w-full px-3 py-2 rounded-md  "  type="number" name="contact" placeholder="contact"  />
+
+        <input class="border-2 block  mt-2 w-full px-3 py-2 rounded-md "  type="password" name="password" placeholder="Password"  />
+ 
+        <input class="block mt-4 mb-2 w-full px-3 py-2 bg-red-600 text-white rounded-md cursor-pointer" type="submit" value="Signup">
+        <p class="text-xs text-zinc-700 leading-none mt-2 p-2">By continuing, you agree to Pinterest's <strong>Terms of Service</strong>, and acknowledge that you've read our <strong>Privacy Policy, Notice at collection.</strong></p><hr class="h-[1px] bg-zinc-900">
+      </form>
+      <a  class="inline-block mt-4 mb-4 text-sm font-semibold text-zinc-700 text-center " href="/">Login to existing Account</a>
+
+</div>
+</div>     
+
+     
+     
+
+<% include ./partials/footer.ejs %>
