@@ -40,6 +40,12 @@ router.get('/feed',isLoggedIn,async function(req, res, next) {
    res.render('feed',{user,posts,nav:true})
 });
 
+router.get('/image/:id', isLoggedIn, async function(req, res, next) {
+    const user = await userModel.findOne({ username:req.session.passport.user}).populate("posts")
+    const postId = req.params.id;
+    const post = await postModel.findById(postId).populate('user');
+    res.render('image', { user: req.user, post, nav: true });  
+});
 
 router.get('/edit', isLoggedIn, async function(req, res, next) {
   const user = await userModel.findOne({ username: req.session.passport.user });
